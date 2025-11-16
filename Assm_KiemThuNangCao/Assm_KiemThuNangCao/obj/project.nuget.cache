@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tnlszI/Y7zg=",
+  "dgSpecHash": "D8w3wnSyPLQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj",
+  "projectFilePath": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\THIS PC\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.0\\microsoft.entityframeworkcore.9.0.0.nupkg.sha512",
     "C:\\Users\\THIS PC\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.0\\microsoft.entityframeworkcore.abstractions.9.0.0.nupkg.sha512",

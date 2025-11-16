@@ -759,11 +759,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj",
+      "projectUniqueName": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj",
       "projectName": "Assm_KiemThuNangCao",
-      "projectPath": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj",
+      "projectPath": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj",
       "packagesPath": "C:\\Users\\THIS PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\obj\\",
+      "outputPath": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
