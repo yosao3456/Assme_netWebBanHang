@@ -44,6 +44,10 @@ namespace Assm_KiemThuNangCao.Controllers
         {
             return View();
         }
+        public IActionResult footer()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
