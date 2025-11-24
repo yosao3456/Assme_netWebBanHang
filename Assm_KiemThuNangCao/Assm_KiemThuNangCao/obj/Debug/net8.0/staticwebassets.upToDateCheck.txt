@@ -1,7 +1,14 @@
 wwwroot\css\footer.css
 wwwroot\css\Header.css
+wwwroot\css\SanPhamCuaTrangChu.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\Img\BannerDienThoai.jpg
+wwwroot\Img\BannerMayGiat.jpg
+wwwroot\Img\BannerMayTinh.jpg
+wwwroot\Img\BannerTuLanh.jpg
+wwwroot\Img\ImgBigsale.jpg
+wwwroot\Img\ImgMayTinh.jpg
 wwwroot\js\header.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
@@ -61,3 +68,4 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\Body.css
