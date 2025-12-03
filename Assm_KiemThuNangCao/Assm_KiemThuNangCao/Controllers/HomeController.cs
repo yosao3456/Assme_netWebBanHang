@@ -19,20 +19,24 @@ namespace Assm_KiemThuNangCao.Controllers
         {
             _context = context;  
         }
+        public IActionResult TimSanPhamTheoMucLuc(int categoryId)
+        {
+            var products = _context.Products
+                                   .Where(p => p.CategoryID == categoryId)
+                                   .ToList();
+
+            var category = _context.Categories.FirstOrDefault(c => c.CategoryID == categoryId);
+            ViewBag.CategoryName = category?.CategoryName ?? "Sản phẩm";
+
+            return View(products);
+        }
         public IActionResult Index()
         {
-            try
-            {
-                // Thử truy vấn database để kiểm tra kết nối
-                var count = _context.Products.Count();
-                ViewBag.Message = $"✅ Kết nối thành công! Có {count} sản phẩm trong database.";
-            }
-            catch (Exception ex)
-            {
-                ViewBag.Message = $"❌ Kết nối thất bại: {ex.Message}";
-            }
+            var categories = _context.Categories.ToList();
+            var products = _context.Products.ToList();
 
-            return View();
+            ViewBag.Products = products;
+            return View(categories);
             
         }
 
