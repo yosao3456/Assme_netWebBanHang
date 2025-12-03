@@ -534,3 +534,7 @@ C:\Users\ADMIN\OneDrive\Documents\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao
 C:\Users\ADMIN\OneDrive\Documents\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\obj\Debug\net8.0\Assm_KiemThuNangCao.pdb
 C:\Users\ADMIN\OneDrive\Documents\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\obj\Debug\net8.0\Assm_KiemThuNangCao.genruntimeconfig.cache
 C:\Users\ADMIN\OneDrive\Documents\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\obj\Debug\net8.0\ref\Assm_KiemThuNangCao.dll
+C:\Users\nguye\OneDrive\Documents\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\obj\Debug\net8.0\Assm_KiemThuNangCao.csproj.AssemblyReference.cache
+C:\Users\nguye\OneDrive\Documents\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\obj\Debug\net8.0\Assm_KiemThuNangCao.dll
+C:\Users\nguye\OneDrive\Documents\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\obj\Debug\net8.0\refint\Assm_KiemThuNangCao.dll
+C:\Users\nguye\OneDrive\Documents\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\obj\Debug\net8.0\Assm_KiemThuNangCao.pdb
