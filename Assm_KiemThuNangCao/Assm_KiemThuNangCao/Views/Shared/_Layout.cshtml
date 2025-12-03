@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="~/css/Header.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/footer.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/Body.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/SanPhamCuaTrangChu.css" asp-append-version="true" />
+        <script src="~/js/header.js"></script>
+    <title>
+        @ViewData["Title"] - Assm_KiemThuNangCao
+        @ViewData["Header"] - Assm_KiemThuNangCao
+        @ViewData["footer"] - Assm_KiemThuNangCao
+    </title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+         @await Html.PartialAsync("Header")
+    </header>
+
+    <div class="KhungGiua">
+        @RenderBody()
+    </div>
+
+    <footer>
+        @await Html.PartialAsync("footer")
+    </footer>
+
+</body>
+</html>

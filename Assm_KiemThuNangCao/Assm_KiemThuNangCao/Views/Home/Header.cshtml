@@ -1,0 +1,31 @@
+
+@{
+    ViewData["Header"] = "Header";
+}
+
+
+<div class="header-wrapper">
+
+    <div class="header-left">
+        <a href="/" class="logo">SHOP DEMO</a>
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Tìm sản phẩm, thương hiệu..." />
+        <button>Tìm</button>
+    </div>
+
+    <div class="header-right">
+        <a href="">Đăng nhập</a>
+        <a href="">Đăng ký</a>
+        <a href="">Giỏ hàng 🛒</a>
+        <button class="menu-btn" onclick="openMenu()">☰</button>
+    </div>
+</div>
+
+<div id="sideMenu" class="side-menu">
+    <button class="close-btn" onclick="closeMenu()">×</button>
+    <ul>
+
+    </ul>
+</div>
