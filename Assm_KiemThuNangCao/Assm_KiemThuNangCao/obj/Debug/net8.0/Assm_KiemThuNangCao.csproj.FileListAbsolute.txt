@@ -98,7 +98,6 @@ C:\Users\THIS PC\Downloads\File bai tap\GitHub\Assme_netWebBanHang\Assm_KiemThuN
 C:\Users\THIS PC\Downloads\File bai tap\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\obj\Debug\net8.0\Assm_KiemThuNangCao.pdb
 C:\Users\THIS PC\Downloads\File bai tap\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\obj\Debug\net8.0\Assm_KiemThuNangCao.genruntimeconfig.cache
 C:\Users\THIS PC\Downloads\File bai tap\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\obj\Debug\net8.0\ref\Assm_KiemThuNangCao.dll
-C:\Users\THIS PC\Downloads\File bai tap\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\THIS PC\Downloads\File bai tap\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\bin\Debug\net8.0\Humanizer.dll
 C:\Users\THIS PC\Downloads\File bai tap\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\THIS PC\Downloads\File bai tap\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
