@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|c:\\users\\this pc\\downloads\\file bai tap\\github\\assme_netwebbanhang\\assm_kiemthunangcao\\assm_kiemthunangcao\\wwwroot\\css\\body.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|solutionrelative:assm_kiemthunangcao\\wwwroot\\css\\body.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|c:\\users\\this pc\\downloads\\file bai tap\\github\\assme_netwebbanhang\\assm_kiemthunangcao\\assm_kiemthunangcao\\wwwroot\\css\\sanphamcuatrangchu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|solutionrelative:assm_kiemthunangcao\\wwwroot\\css\\sanphamcuatrangchu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|c:\\users\\this pc\\downloads\\file bai tap\\github\\assme_netwebbanhang\\assm_kiemthunangcao\\assm_kiemthunangcao\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|solutionrelative:assm_kiemthunangcao\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|c:\\users\\this pc\\downloads\\file bai tap\\github\\assme_netwebbanhang\\assm_kiemthunangcao\\assm_kiemthunangcao\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|solutionrelative:assm_kiemthunangcao\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|c:\\users\\this pc\\downloads\\file bai tap\\github\\assme_netwebbanhang\\assm_kiemthunangcao\\assm_kiemthunangcao\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|solutionrelative:assm_kiemthunangcao\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,35 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Body.css",
-              "DocumentMoniker": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\wwwroot\\css\\Body.css",
-              "RelativeDocumentMoniker": "Assm_KiemThuNangCao\\wwwroot\\css\\Body.css",
-              "ToolTip": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\wwwroot\\css\\Body.css",
-              "RelativeToolTip": "Assm_KiemThuNangCao\\wwwroot\\css\\Body.css",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-23T03:47:33.227Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Assm_KiemThuNangCao\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Assm_KiemThuNangCao\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-23T04:11:59.102Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -66,42 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SanPhamCuaTrangChu.css",
-              "DocumentMoniker": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\wwwroot\\css\\SanPhamCuaTrangChu.css",
-              "RelativeDocumentMoniker": "Assm_KiemThuNangCao\\wwwroot\\css\\SanPhamCuaTrangChu.css",
-              "ToolTip": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\wwwroot\\css\\SanPhamCuaTrangChu.css",
-              "RelativeToolTip": "Assm_KiemThuNangCao\\wwwroot\\css\\SanPhamCuaTrangChu.css",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-23T04:11:48.472Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Assm_KiemThuNangCao\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Assm_KiemThuNangCao\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAiwCMAAABzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-13T13:40:51.856Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Assm_KiemThuNangCao\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Assm_KiemThuNangCao\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowCYAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T13:40:03.569Z"
             }
           ]
         }

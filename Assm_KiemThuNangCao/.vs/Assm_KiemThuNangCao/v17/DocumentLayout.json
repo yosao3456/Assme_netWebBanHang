@@ -1,7 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\THIS PC\\Downloads\\File bai tap\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\OneDrive\\Documents\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|c:\\users\\admin\\onedrive\\documents\\github\\assme_netwebbanhang\\assm_kiemthunangcao\\assm_kiemthunangcao\\views\\home\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|solutionrelative:assm_kiemthunangcao\\views\\home\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|c:\\users\\admin\\onedrive\\documents\\github\\assme_netwebbanhang\\assm_kiemthunangcao\\assm_kiemthunangcao\\views\\home\\footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5AF2F1C-9DE4-4E7D-BE11-A6222F9D6A38}|Assm_KiemThuNangCao\\Assm_KiemThuNangCao.csproj|solutionrelative:assm_kiemthunangcao\\views\\home\\footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,15 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Header.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Documents\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Views\\Home\\Header.cshtml",
+              "RelativeDocumentMoniker": "Assm_KiemThuNangCao\\Views\\Home\\Header.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Documents\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Views\\Home\\Header.cshtml",
+              "RelativeToolTip": "Assm_KiemThuNangCao\\Views\\Home\\Header.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T00:49:56.958Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "footer.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Documents\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Views\\Home\\footer.cshtml",
+              "RelativeDocumentMoniker": "Assm_KiemThuNangCao\\Views\\Home\\footer.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Documents\\GitHub\\Assme_netWebBanHang\\Assm_KiemThuNangCao\\Assm_KiemThuNangCao\\Views\\Home\\footer.cshtml",
+              "RelativeToolTip": "Assm_KiemThuNangCao\\Views\\Home\\footer.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T00:49:55.123Z",
+              "EditorCaption": ""
             }
           ]
         }
