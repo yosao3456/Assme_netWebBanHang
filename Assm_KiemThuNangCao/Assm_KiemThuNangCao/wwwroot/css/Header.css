@@ -46,6 +46,7 @@
     align-items: center;
     padding-right: 10px;
     gap: 20px;
+    white-space: nowrap;
     flex-shrink: 1;       /* Cho phép co lại */
     max-width: 35%;       /* Không chiếm quá 35% màn hình */
     overflow: hidden;     /* Không để tràn */

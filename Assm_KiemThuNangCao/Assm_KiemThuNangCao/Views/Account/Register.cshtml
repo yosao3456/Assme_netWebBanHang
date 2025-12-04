@@ -1,0 +1,148 @@
+@model Assm_KiemThuNangCao.Models.Customer
+@{
+    ViewData["Title"] = "Đăng ký tài khoản";
+}
+
+<div class="auth-container">
+    <div class="auth-box">
+        <h2>Đăng ký</h2>
+
+        <form asp-action="Register" method="post">
+
+            <div class="input-group">
+                <label>Họ và tên</label>
+                <input asp-for="FullName" placeholder="Nhập họ tên..." />
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input asp-for="Email" placeholder="Nhập email..." />
+            </div>
+
+            <div class="input-group">
+                <label>Mật khẩu</label>
+                <input asp-for="Password" type="password" placeholder="Nhập mật khẩu..." />
+            </div>
+
+            <div class="input-group">
+                <label>Địa chỉ</label>
+                <input asp-for="Address" placeholder="Nhập địa chỉ..." />
+            </div>
+
+            <div class="input-group">
+                <label>Số điện thoại</label>
+                <input asp-for="Phone" placeholder="Nhập số điện thoại..." />
+            </div>
+
+            <button type="submit" class="submit-btn">Tạo tài khoản</button>
+        </form>
+
+        <div class="divider">Hoặc</div>
+
+        <button type="button" class="google-btn" onclick="googleNotice()">
+            <img src="https://www.svgrepo.com/show/355037/google.svg" />
+            Đăng nhập bằng Google
+        </button>
+
+        <p class="switch-text">
+            Đã có tài khoản?  
+            <a asp-action="Login" asp-controller="Account">Đăng nhập ngay</a>
+        </p>
+    </div>
+</div>
+
+<style>
+    .auth-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .auth-box {
+        width: 420px;
+        padding: 30px;
+        border-radius: 10px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        font-family: Arial;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #ff5722;
+    }
+
+    .input-group { margin-bottom: 15px; }
+
+    .input-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 12px;
+        background: #ff5722;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .submit-btn:hover { opacity: 0.9; }
+
+    .divider {
+        text-align: center;
+        margin: 15px 0;
+        color: gray;
+    }
+
+.google-btn {
+    width: 90%;
+    margin: 10px auto;    
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #444;
+    text-decoration: none;
+}
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+    .switch-text {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .switch-text a {
+        color: #ff5722;
+        text-decoration: none;
+        font-weight: bold;
+    }
+</style>
+<script>
+    function googleNotice() {
+        alert("🚧 Chức năng đăng nhập bằng Google đang được phát triển!");
+    }
+</script>

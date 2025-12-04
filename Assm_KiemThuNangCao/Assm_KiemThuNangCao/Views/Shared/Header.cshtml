@@ -16,8 +16,25 @@
     </div>
 
     <div class="header-right">
-        <a href="">Đăng nhập</a>
-        <a href="">Đăng ký</a>
+
+        @{
+            var userName = Context.Request.Cookies["FullName"];
+        }
+
+        <div class="header-right">
+
+        @if (string.IsNullOrEmpty(userName))
+        {
+            <a asp-controller="Account" asp-action="Login">Đăng nhập</a>
+            <a asp-controller="Account" asp-action="Register">Đăng ký</a>
+        }
+        else
+        {
+            <span class="user-name">Chào mừng <br />👤 @userName</span>
+            @* <a asp-controller="Account" asp-action="Logout">Đăng xuất</a> *@
+        }
+    </div>
+
         <a href="">Giỏ hàng 🛒</a>
         <button class="menu-btn" onclick="openMenu()">☰</button>
     </div>
