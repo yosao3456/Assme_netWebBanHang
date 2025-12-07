@@ -22,7 +22,14 @@
     border-radius: 15px;
     box-shadow: 0 0 12px rgba(0,0,0,0.1);
 }
-
+.product-name {
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+}
 .product-image img {
     width: 180px;
     height: 180px;
@@ -79,10 +86,11 @@
             </div>
 
             <div class="product-info">
-                <h3>@p.ProductName</h3>
+                <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@p.ProductID" class="product-name">@p.ProductName</a>
                 <p><strong>Mô tả:</strong> @p.Description</p>
                 <p><strong>Màu sắc:</strong> @p.Color</p>
                 <p><strong>Kích thước:</strong> @p.Size</p>
+                <p><strong>Còn lại:</strong> @p.Quantity sản phẩm</p>
                 <p class="price"><strong>Giá:</strong> @p.Price.ToString("N0") VND</p>
             </div>
 

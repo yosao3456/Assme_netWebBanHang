@@ -1,0 +1,191 @@
+@model List<CartDetail>
+@using Microsoft.AspNetCore.Antiforgery
+@inject IAntiforgery AntiForgery
+
+@{
+    ViewData["Title"] = "Giỏ hàng";
+}
+
+<h2>Đơn hàng cửa bạn</h2>
+
+@Html.AntiForgeryToken()  <!-- tạo token cho AJAX -->
+
+@if (!Model.Any())
+{
+    <div class="alert">Giỏ hàng trống.</div>
+}
+else
+{
+    <table class="cart-table">
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr id="row-@item.CartDetailID" data-detailid="@item.CartDetailID" data-max="@item.Product.Quantity">
+                    <td style="width:100px">
+                        <img src="~/img/@item.Product.ImageUrl" alt="@item.Product.ProductName" style="width:80px;height:80px;object-fit:contain" />
+                    </td>
+                    <td style="text-align:left">
+                        <div class="prod-name">@item.Product.ProductName</div>
+                    </td>
+                    <td style="width:120px;text-align:right">
+                        <div class="price">@String.Format("{0:N0}", item.Price) VNĐ</div>
+                    </td>
+                    <td style="width:220px;text-align:center">
+                        <div class="qty-box" data-detail="@item.CartDetailID">
+                            <button type="button" class="qty-btn minus" data-id="@item.CartDetailID">−</button>
+                            <input type="text" class="qty-input" id="qty-@item.CartDetailID" value="@item.Quantity" data-id="@item.CartDetailID" style="width:60px;text-align:center" />
+                            <button type="button" class="qty-btn plus" data-id="@item.CartDetailID">+</button>
+                        </div>
+                        <div class="qty-error" id="err-@item.CartDetailID" style="color:red;display:none;font-size:0.9em;margin-top:6px"></div>
+                    </td>
+                    <td style="width:150px;text-align:right">
+                        <div id="subtotal-@item.CartDetailID" class="subtotal">@String.Format("{0:N0}", item.Quantity * item.Price) VNĐ</div>
+                    </td>
+                    <td style="width:100px;text-align:center">
+                        <button type="button" class="btn-remove" data-id="@item.CartDetailID">Xóa</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div style="margin-top:20px;text-align:right">
+<form asp-controller="Cart" asp-action="Checkout" method="post">
+    <button type="submit" class="btn btn-success">ĐẶT TẤT CẢ</button>
+</form>
+    </div>
+}
+ 
+<link rel="stylesheet" href="~/css/cart.css" asp-append-version="true" />
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    // Lấy token anti-forgery
+    var token = $('input[name="__RequestVerificationToken"]').first().val();
+
+    // Helper gửi post AJAX với token
+    function postAjax(url, data, onSuccess, onError) {
+        data.__RequestVerificationToken = token;
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: data,
+            success: function (res) {
+                onSuccess && onSuccess(res);
+            },
+            error: function (xhr) {
+                onError && onError(xhr);
+            }
+        });
+    }
+
+    // Delegated events: dùng document.on để áp dụng với các phần tử được render động
+    $(document).on('click', '.plus', function () {
+        var id = $(this).data('id');
+        var input = $('#qty-' + id);
+        var current = parseInt(input.val()) || 0;
+        var max = parseInt($('#row-' + id).data('max')) || 9999;
+        var newQty = current + 1;
+        if (newQty > max) {
+            showError(id, 'Không được lớn hơn tồn kho (' + max + ')');
+            return;
+        }
+        updateQuantity(id, newQty);
+    });
+
+    $(document).on('click', '.minus', function () {
+        var id = $(this).data('id');
+        var input = $('#qty-' + id);
+        var current = parseInt(input.val()) || 0;
+        var newQty = current - 1;
+        if (newQty < 1) {
+            showError(id, 'Số lượng tối thiểu là 1');
+            return;
+        }
+        updateQuantity(id, newQty);
+    });
+
+    // Nhập tay: validate rồi gửi
+    $(document).on('change', '.qty-input', function () {
+        var id = $(this).data('id');
+        var raw = $(this).val();
+        var num = parseInt(raw);
+        var max = parseInt($('#row-' + id).data('max')) || 9999;
+
+        if (isNaN(num) || num < 1) {
+            showError(id, 'Số không hợp lệ');
+            $(this).val(1);
+            return;
+        }
+        if (num > max) {
+            showError(id, 'Vượt quá tồn kho (' + max + ')');
+            $(this).val(max);
+            return;
+        }
+
+        updateQuantity(id, num);
+    });
+
+    // Update quantity (AJAX)
+    function updateQuantity(detailId, qty) {
+        clearError(detailId);
+        postAjax('/Cart/UpdateQuantity', { detailId: detailId, quantity: qty },
+            function (res) {
+                if (!res.success) {
+                    showError(detailId, res.message || 'Cập nhật thất bại');
+                    return;
+                }
+                // Cập nhật giao diện
+                $('#qty-' + detailId).val(qty);
+                $('#subtotal-' + detailId).text((res.subtotal).toLocaleString() + ' VNĐ');
+                // (nếu cần) cập nhật tổng chung ở đây
+                flashSuccess('Cập nhật thành công');
+            },
+            function (xhr) {
+                showError(detailId, 'Lỗi server');
+            }
+        );
+    }
+
+    // Remove item
+    $(document).on('click', '.btn-remove', function () {
+        var id = $(this).data('id');
+        if (!confirm('Bạn chắc chắn muốn xóa sản phẩm này?')) return;
+
+        clearError(id);
+        postAjax('/Cart/RemoveItem', { detailId: id },
+            function (res) {
+                if (!res.success) {
+                    alert('Xóa thất bại');
+                    return;
+                }
+                $('#row-' + id).remove();
+                flashSuccess('Đã xóa sản phẩm');
+            },
+            function () {
+                alert('Lỗi server khi xóa');
+            }
+        );
+    });
+
+    // Hiển thị lỗi nhỏ bên dưới input
+    function showError(detailId, message) {
+        $('#err-' + detailId).text(message).show();
+    }
+    function clearError(detailId) {
+        $('#err-' + detailId).hide().text('');
+    }
+
+    // Hiệu ứng thông báo nhỏ
+    function flashSuccess(msg) {
+        var box = $('<div/>').text(msg).css({
+            position: 'fixed', top: '20px', right: '20px', background: '#28a745', color: '#fff',
+            padding: '10px 14px', borderRadius: '6px', zIndex: 9999
+        }).appendTo('body');
+        setTimeout(function () { box.fadeOut(300, function () { box.remove(); }); }, 1500);
+    }
+
+    // Debug: in console nếu cần (bỏ comment để dùng)
+    // console.log('Cart page loaded, antiforgery token:', token);
+</script>

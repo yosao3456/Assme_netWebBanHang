@@ -32,12 +32,24 @@ namespace Assm_KiemThuNangCao.Controllers
         }
         public IActionResult Index()
         {
+            HttpContext.Session.Remove("Cart");
             var categories = _context.Categories.ToList();
             var products = _context.Products.ToList();
 
             ViewBag.Products = products;
             return View(categories);
             
+        }
+        public IActionResult ProductDetail(int id)
+        {
+            var product = _context.Products.FirstOrDefault(p => p.ProductID == id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return View(product);
         }
 
         public IActionResult Privacy()

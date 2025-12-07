@@ -1,0 +1,27 @@
+@model Product
+
+<h2>Xác nhận đơn hàng</h2>
+
+<div class="buy-box">
+    <img src="@Model.ImageUrl" style="width:200px;border-radius:10px;" />
+
+    <h3>@Model.ProductName</h3>
+    <p>Giá: @Model.Price VNĐ</p>
+
+    <form asp-action="BuyConfirm" method="post">
+        <input type="hidden" name="productId" value="@Model.ProductID" />
+
+        <label>Số lượng:</label>
+        <input type="number" name="quantity" value="1" min="1" max="@Model.Quantity" />
+
+        <button type="submit" class="btn-buy">ĐẶT NGAY</button>
+        
+    </form>
+</div>
+
+<style>
+    .buy-box { width: 350px; margin: 30px auto; text-align: center;
+               padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
+    .btn-buy { background: orange; color: white; padding: 10px 20px; border: none;
+               border-radius: 5px; cursor: pointer; margin-top: 15px; }
+</style>

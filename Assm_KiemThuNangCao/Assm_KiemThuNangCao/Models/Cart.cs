@@ -1,5 +1,7 @@
 ﻿namespace Assm_KiemThuNangCao.Models
 {
+    using System.ComponentModel.DataAnnotations.Schema;
+    [Table("carts")]
     public class Cart
     {
         public int CartID { get; set; }

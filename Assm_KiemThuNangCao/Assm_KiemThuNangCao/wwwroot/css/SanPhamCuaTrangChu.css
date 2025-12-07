@@ -31,13 +31,17 @@
     height: 160px;
     object-fit: contain;
     margin-bottom: 10px;
+    
 }
+
 
 .product-name {
     font-size: 16px;
     font-weight: bold;
     height: 40px;
     overflow: hidden;
+    text-decoration: none;
+    color: black;
 }
 
 .product-info {
@@ -56,12 +60,13 @@
 .btn-buy {
     width: 100%;
     background: #ff5722;
-    color: white;
     border: none;
     padding: 8px;
     border-radius: 6px;
     margin-top: 8px;
     cursor: pointer;
+    text-decoration: none;
+    color: whitesmoke;
 }
 
     .btn-buy:hover {

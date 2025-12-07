@@ -36,6 +36,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/THIS PC/Downloads/File bai tap/GitHub/Assme_netWebBanHang/Assm_KiemThuNangCao/Assm_KiemThuNangCao/Views/Cart/Buy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxCdXkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/THIS PC/Downloads/File bai tap/GitHub/Assme_netWebBanHang/Assm_KiemThuNangCao/Assm_KiemThuNangCao/Views/Cart/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/THIS PC/Downloads/File bai tap/GitHub/Assme_netWebBanHang/Assm_KiemThuNangCao/Assm_KiemThuNangCao/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/THIS PC/Downloads/File bai tap/GitHub/Assme_netWebBanHang/Assm_KiemThuNangCao/Assm_KiemThuNangCao/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,6 +58,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/THIS PC/Downloads/File bai tap/GitHub/Assme_netWebBanHang/Assm_KiemThuNangCao/Assm_KiemThuNangCao/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/THIS PC/Downloads/File bai tap/GitHub/Assme_netWebBanHang/Assm_KiemThuNangCao/Assm_KiemThuNangCao/Views/Home/ProductDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/THIS PC/Downloads/File bai tap/GitHub/Assme_netWebBanHang/Assm_KiemThuNangCao/Assm_KiemThuNangCao/Views/Shared/Error.cshtml]

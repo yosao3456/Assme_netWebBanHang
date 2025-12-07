@@ -42,19 +42,21 @@ public IActionResult Login(string email, string password)
         return View();
     }
 
-    // Lưu tên người dùng vào Cookie
     CookieOptions option = new CookieOptions
     {
         Expires = DateTime.Now.AddDays(7)
     };
 
-    Response.Cookies.Append("FullName", user.FullName, option);
+    // CHỈ DÙNG 1 COOKIE DUY NHẤT
+    Response.Cookies.Append("UserEmail", user.Email, option);
 
     return RedirectToAction("Index", "Home");
 }
+
 public IActionResult Logout()
 {
-    Response.Cookies.Delete("FullName");
+    // XÓA ĐÚNG COOKIE
+    Response.Cookies.Delete("UserEmail");
     return RedirectToAction("Index", "Home");
 }
     }

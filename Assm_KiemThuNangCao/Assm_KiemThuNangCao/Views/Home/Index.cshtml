@@ -43,14 +43,16 @@
 
             <img src="~/Img/@p.ImageUrl" class="product-img" asp-append-version="true" />
 
-            <h3 class="product-name">@p.ProductName</h3>
+            <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@p.ProductID" class="product-name">@p.ProductName</a>
 
             <p class="product-info">@p.Description</p>
             <p class="product-info">Màu: @p.Color</p>
             <p class="product-info">Kích thước: @p.Size</p>
+            <p class="product-info">Đang còn: @p.Quantity sản phẩm</p>
             <p class="product-price">@p.Price.ToString("N0") VND</p>
 
-            <button class="btn-buy">Mua ngay</button>
+
+            <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@p.ProductID" class="btn-buy">Mua Ngay</a>
         </div>
     }
 </div>

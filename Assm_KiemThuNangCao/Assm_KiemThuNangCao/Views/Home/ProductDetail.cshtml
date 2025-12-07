@@ -1,0 +1,95 @@
+@model Product
+
+<div class="product-detail-container">
+
+    <div class="product-detail-left">
+        <img src="~/Img/@Model.ImageUrl" class="product-detail-img" asp-append-version="true" />
+    </div>
+
+    <div class="product-detail-right">
+        <h2>@Model.ProductName</h2>
+
+        <p><strong>Mô tả:</strong> @Model.Description</p>
+        <p><strong>Màu sắc:</strong> @Model.Color</p>
+        <p><strong>Kích thước:</strong> @Model.Size</p>
+        <p><strong>Còn lại:</strong> @Model.Quantity sản phẩm</p>
+
+        <p class="product-price">
+            Giá: @Model.Price.ToString("#,###") VNĐ
+        </p>
+
+<form asp-controller="Cart" asp-action="Buy" method="get">
+    <input type="hidden" name="id" value="@Model.ProductID" />
+    <button type="submit" class="btn-buy">Mua ngay</button>
+</form>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+    TempData["Success"] = null; 
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+    </div>
+
+</div>
+<style>
+.product-detail-container {
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+    gap: 30px;
+}
+
+.product-detail-left {
+    width: 40%;
+}
+
+.product-detail-img {
+    width: 526px;
+    height: 526px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.product-detail-right {
+    width: 60%;
+    font-size: 18px;
+}
+
+.product-price {
+    font-size: 22px;
+    color: red;
+    font-weight: bold;
+}
+
+.btn-buy {
+    width: 250px;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: orange;
+    color: whitesmoke;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-buy:hover {
+    background-color: darkorange;
+}
+.alert {
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.alert-success { background: #c8f7c5; color: #2d7a2d; }
+.alert-danger  { background: #ffd0d0; color: #a00000; }
+</style>
