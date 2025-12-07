@@ -24,8 +24,8 @@
     @foreach (var cate in Model)
     {
         <a asp-controller="Home"
-           asp-action="TimSanPhamTheoMucLuc"
-           asp-route-categoryId="@cate.CategoryID"
+           asp-action="MucLucSanPham"
+           asp-route-categoryID="@cate.CategoryID"
            class="muc-luc-item">
 
             <p class="muc-luc-title">@cate.CategoryName</p>
@@ -41,7 +41,7 @@
     {
         <div class="product-card">
 
-            <img src="~/img/products/@p.ImageUrl" class="product-img" asp-append-version="true" />
+            <img src="~/Img/@p.ImageUrl" class="product-img" asp-append-version="true" />
 
             <h3 class="product-name">@p.ProductName</h3>
 

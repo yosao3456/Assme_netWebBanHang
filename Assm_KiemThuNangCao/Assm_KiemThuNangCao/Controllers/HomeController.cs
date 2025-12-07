@@ -19,7 +19,7 @@ namespace Assm_KiemThuNangCao.Controllers
         {
             _context = context;  
         }
-        public IActionResult TimSanPhamTheoMucLuc(int categoryId)
+        public IActionResult MucLucSanPham(int categoryId)
         {
             var products = _context.Products
                                    .Where(p => p.CategoryID == categoryId)
