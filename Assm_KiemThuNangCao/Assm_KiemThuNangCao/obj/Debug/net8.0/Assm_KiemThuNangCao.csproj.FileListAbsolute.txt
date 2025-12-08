@@ -291,4 +291,3 @@ C:\Users\THIS PC\Downloads\File bai tap\GitHub\Assme_netWebBanHang\Assm_KiemThuN
 C:\Users\THIS PC\Downloads\File bai tap\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\THIS PC\Downloads\File bai tap\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\THIS PC\Downloads\File bai tap\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
-C:\Users\THIS PC\Downloads\File bai tap\GitHub\Assme_netWebBanHang\Assm_KiemThuNangCao\Assm_KiemThuNangCao\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
