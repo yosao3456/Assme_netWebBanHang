@@ -72,3 +72,42 @@
     .btn-buy:hover {
         background: #e64a19;
     }
+.pagination {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 0 4px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    transition: 0.25s;
+    text-decoration: none;
+}
+
+.pagination .page-number:hover,
+.pagination .page-btn:hover {
+    border-color: #f36f21;
+    color: #f36f21;
+}
+
+.pagination .active {
+    background: #f36f21;
+    color: white;
+    border-color: #f36f21;
+}
+
+.pagination .page-btn {
+    font-weight: bold;
+}
+
+.pagination .dots {
+    border: none;
+    background: none;
+}

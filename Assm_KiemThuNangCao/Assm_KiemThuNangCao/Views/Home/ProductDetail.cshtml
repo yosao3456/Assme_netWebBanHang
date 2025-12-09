@@ -20,8 +20,24 @@
 
 <form asp-controller="Cart" asp-action="Buy" method="get">
     <input type="hidden" name="id" value="@Model.ProductID" />
-    <button type="submit" class="btn-buy">Mua ngay</button>
+    <button type="submit" class="btn-buy">Thêm vào giỏ hàng</button>
 </form>
+<h2 class="related-title">Có thể bạn sẽ thích</h2>
+
+<div class="related-grid">
+    @foreach (var p in ViewBag.RelatedProducts)
+    {
+        <div class="related-card">
+        <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@p.ProductID"
+               class="related-name"><img src="~/Img/@p.ImageUrl" class="related-img" asp-append-version="true" /></a>
+
+            <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@p.ProductID"
+               class="related-name">@p.ProductName</a>
+
+            <p class="related-price">@p.Price.ToString("N0") VND</p>
+        </div>
+    }
+</div>
 
 @if (TempData["Success"] != null)
 {
@@ -92,4 +108,49 @@
 
 .alert-success { background: #c8f7c5; color: #2d7a2d; }
 .alert-danger  { background: #ffd0d0; color: #a00000; }
+.related-title {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.related-grid {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 sản phẩm mỗi hàng */
+    gap: 20px;
+}
+
+.related-card {
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.related-card:hover {
+    transform: translateY(-4px);
+}
+
+.related-img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.related-name {
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin: 8px 0;
+    text-decoration: none;
+}
+
+.related-price {
+    color: #f36f21;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 </style>

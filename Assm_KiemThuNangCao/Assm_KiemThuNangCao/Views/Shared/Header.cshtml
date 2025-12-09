@@ -10,10 +10,14 @@
         <a href="/" class="logo">SHOP New</a>
     </div>
 
-    <div class="search-box">
-        <input type="text" placeholder="Tìm sản phẩm, thương hiệu..." />
-        <button>Tìm</button>
-    </div>
+<div class="search-box">
+    <form asp-controller="Home" asp-action="Search" method="get">
+        <input type="text" id="searchInput" name="keyword" placeholder="Tìm sản phẩm..." autocomplete="off" />
+        <button type="submit" class="search-btn">Tìm</button>
+    </form>
+
+    <ul id="suggestList" class="suggest-box"></ul>
+</div>
 
     <div class="header-right">
 
@@ -45,3 +49,28 @@
 
     </ul>
 </div>
+<script>
+document.getElementById("searchInput").addEventListener("keyup", function () {
+    let keyword = this.value;
+
+    if (keyword.length < 1) {
+        document.getElementById("suggestList").innerHTML = "";
+        return;
+    }
+
+    fetch(`/Home/SearchSuggest?keyword=${keyword}`)
+        .then(res => res.json())
+        .then(data => {
+            let html = "";
+            data.forEach(item => {
+                html += `<li onclick="selectSuggest('${item}')">${item}</li>`;
+            });
+            document.getElementById("suggestList").innerHTML = html;
+        });
+});
+
+function selectSuggest(text) {
+    document.getElementById("searchInput").value = text;
+    document.getElementById("suggestList").innerHTML = "";
+}
+</script>

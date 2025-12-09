@@ -3,7 +3,7 @@
 <h2>Xác nhận đơn hàng</h2>
 
 <div class="buy-box">
-    <img src="@Model.ImageUrl" style="width:200px;border-radius:10px;" />
+    <img src="~/Img/@Model.ImageUrl" style="width:200px;border-radius:10px;" />
 
     <h3>@Model.ProductName</h3>
     <p>Giá: @Model.Price VNĐ</p>
@@ -14,7 +14,7 @@
         <label>Số lượng:</label>
         <input type="number" name="quantity" value="1" min="1" max="@Model.Quantity" />
 
-        <button type="submit" class="btn-buy">ĐẶT NGAY</button>
+        <button type="submit" class="btn-buy">Xác nhận số lượng sản phẩm</button>
         
     </form>
 </div>

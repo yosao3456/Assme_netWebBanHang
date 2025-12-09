@@ -1,0 +1,29 @@
+@model List<Product>
+
+<h2 style="margin-top:20px">
+    Kết quả tìm kiếm cho: <b>@ViewBag.Keyword</b>
+</h2>
+
+@if (Model.Count == 0)
+{
+    <p>Không tìm thấy sản phẩm nào.</p>
+}
+else
+{
+    <div class="product-grid">
+        @foreach (var p in Model)
+        {
+            <div class="product-card">
+
+                <img src="~/Img/@p.ImageUrl" class="product-img" asp-append-version="true" />
+
+                <a asp-controller="Home" 
+                   asp-action="ProductDetail" 
+                   asp-route-id="@p.ProductID"
+                   class="product-name">@p.ProductName</a>
+
+                <p class="product-price">@p.Price.ToString("N0") VND</p>
+            </div>
+        }
+    </div>
+}

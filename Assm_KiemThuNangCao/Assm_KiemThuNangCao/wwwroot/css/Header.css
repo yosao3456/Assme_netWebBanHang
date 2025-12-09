@@ -17,29 +17,6 @@
 }
 
 
-.search-box {
-    width: 500px;
-    display: flex;
-    margin: 0 20px;
-    background: white;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.search-box input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    outline: none;
-}
-
-.search-box button {
-    background: #6d1900;
-    color: white;
-    border: none;
-    width: 70px;
-    cursor: pointer;
-}
 
 .header-right {
     display: flex;
@@ -99,4 +76,60 @@
     font-size: 32px;
     cursor: pointer;
     float: right;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Ô input */
+.search-box input {
+    width: 350px;
+    padding: 10px 12px;
+    border-radius: 8px 0 0 8px;
+    border: 2px solid #1e90ff;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Nút tìm */
+.search-btn {
+    background: #6a1b09; /* màu nâu đậm */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Gợi ý */
+.suggest-box {
+    position: absolute;
+    top: 30px;       /* nếu còn bị thấp, chỉnh thành 40px hoặc 38px */
+    left: 10px;
+    width: 350px;
+    background: #ffffff;
+    color: #000000;
+    border: none !important;   /* XÓA đường viền */
+    outline: none !important;  /* XÓA luôn outline */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* bóng nhẹ, đẹp */
+    border-radius: 6px;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    z-index: 9999;
+}
+
+/* Dòng gợi ý */
+.suggest-box li {
+    padding: 8px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Hover */
+.suggest-box li:hover {
+    background: #f0f0f0;
 }

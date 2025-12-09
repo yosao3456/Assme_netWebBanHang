@@ -1,6 +1,9 @@
 ﻿
 @{
     ViewData["Title"] = "Trang chủ";
+
+    var categories = ViewBag.Categories;
+    var products = ViewBag.Products;
 }
 <div class="slider-container">
 
@@ -19,9 +22,8 @@
     </div>
 </div>
 @* _____________________________________________________________________________________________________________ *@
-@model List<Category>
 <div class="muc-luc">
-    @foreach (var cate in Model)
+    @foreach (var cate in categories)
     {
         <a asp-controller="Home"
            asp-action="MucLucSanPham"
@@ -37,10 +39,9 @@
 <h2 class="product-title">Sản phẩm mới nhất</h2>
 
 <div class="product-grid">
-    @foreach (var p in ViewBag.Products)
+    @foreach (var p in products)
     {
         <div class="product-card">
-
             <img src="~/Img/@p.ImageUrl" class="product-img" asp-append-version="true" />
 
             <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@p.ProductID" class="product-name">@p.ProductName</a>
@@ -51,8 +52,70 @@
             <p class="product-info">Đang còn: @p.Quantity sản phẩm</p>
             <p class="product-price">@p.Price.ToString("N0") VND</p>
 
-
-            <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@p.ProductID" class="btn-buy">Mua Ngay</a>
+            <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@p.ProductID" class="btn-buy">Xem sản phẩm</a>
         </div>
     }
+</div>
+@{
+    int current = ViewBag.CurrentPage;
+    int total = ViewBag.TotalPages;
+}
+
+<div class="pagination">
+
+    
+    @if (current > 1)
+    {
+        <a asp-action="Index" asp-route-page="@(current - 1)" class="page-btn">◀</a>
+    }
+
+    
+    <a asp-action="Index" asp-route-page="1"
+       class="page-number @(current == 1 ? "active" : "")">1</a>
+
+    
+    @if (total >= 2)
+    {
+        <a asp-action="Index" asp-route-page="2"
+           class="page-number @(current == 2 ? "active" : "")">2</a>
+    }
+
+    
+    @if (current > 4)
+    {
+        <span class="dots">...</span>
+    }
+
+    
+    @for (int i = current - 1; i <= current + 1; i++)
+    {
+        if (i > 2 && i < total - 1)
+        {
+            <a asp-action="Index" asp-route-page="@i"
+               class="page-number @(i == current ? "active" : "")">@i</a>
+        }
+    }
+
+    
+    @if (current < total - 3)
+    {
+        <span class="dots">...</span>
+    }
+
+    
+    @if (total >= 2)
+    {
+        <a asp-action="Index" asp-route-page="@(total - 1)"
+           class="page-number @(current == total - 1 ? "active" : "")">@((int)total - 1)</a>
+    }
+
+    <a asp-action="Index" asp-route-page="@total"
+       class="page-number @(current == total ? "active" : "")">@total</a>
+
+
+    @if (current < total)
+    {
+        <a asp-action="Index" asp-route-page="@(current + 1)" class="page-btn">▶</a>
+    }
+
 </div>
