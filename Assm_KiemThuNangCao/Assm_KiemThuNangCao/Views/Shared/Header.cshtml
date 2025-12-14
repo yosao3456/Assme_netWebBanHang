@@ -1,6 +1,20 @@
 
 @{
     ViewData["Header"] = "Header";
+    var email = Context.Request.Cookies["UserEmail"];
+    string displayName = "Khách";
+
+    if (!string.IsNullOrEmpty(email))
+    {
+        var db = Context.RequestServices
+                        .GetService(typeof(AppDbContext)) as AppDbContext;
+
+        var user = db?.Customers.FirstOrDefault(x => x.Email == email);
+        if (user != null)
+        {
+            displayName = user.FullName;
+        }
+    }
 }
 
 
@@ -19,34 +33,45 @@
     <ul id="suggestList" class="suggest-box"></ul>
 </div>
 
-    <div class="header-right">
+<div class="header-right">
 
-        @{
-            var userName = Context.Request.Cookies["FullName"];
-        }
+    @if (displayName == "Khách")
+    {
+        <a asp-controller="Account" asp-action="Login">Đăng nhập</a>
+    }
+    else
+    {
+        <span class="user-name">
+            Chào mừng <br /> 👤 @displayName
+        </span>
+    }
 
-        <div class="header-right">
+    <a asp-controller="Cart" asp-action="Index">Giỏ hàng 🛒</a>
+    <button class="menu-btn" onclick="openMenu()">☰</button>
 
-        @if (string.IsNullOrEmpty(userName))
-        {
-            <a asp-controller="Account" asp-action="Login">Đăng nhập</a>
-            @* <a asp-controller="Account" asp-action="Register">Đăng ký</a> *@
-        }
-        else
-        {
-            <span class="user-name">Chào mừng <br />👤 @userName</span>
-            @* <a asp-controller="Account" asp-action="Logout">Đăng xuất</a> *@
-        }
-    </div>
-        <a asp-controller="Cart" asp-action="Index">Giỏ hàng 🛒</a>
-        <button class="menu-btn" onclick="openMenu()">☰</button>
-    </div>
+</div>
 </div>
 
 <div id="sideMenu" class="side-menu">
-    <button class="close-btn" onclick="closeMenu()">×</button>
-    <ul>
+    <div class="side-menu-header">
+        <img src="~/Img/default-avatar.jpg" class="avatar" />
+        <p class="username">
+            <p class="username">@displayName</p>
+        </p>
+    </div>
 
+    <ul class="side-menu-list">
+        <li onclick="comingSoon()">
+            👤 Hồ sơ người dùng
+        </li>
+        <li onclick="comingSoon()">
+            📦 Xem đơn hàng
+        </li>
+        <li>
+            <a asp-controller="Account" asp-action="Logout" class="logout-btn">
+                🚪 Đăng xuất
+            </a>
+        </li>
     </ul>
 </div>
 <script>

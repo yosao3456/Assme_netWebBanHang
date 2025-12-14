@@ -42,21 +42,21 @@ public IActionResult Login(string email, string password)
         return View();
     }
 
-    CookieOptions option = new CookieOptions
-    {
-        Expires = DateTime.Now.AddDays(7)
-    };
-
-    // CHỈ DÙNG 1 COOKIE DUY NHẤT
-    Response.Cookies.Append("UserEmail", user.Email, option);
+Response.Cookies.Append("UserEmail", user.Email, new CookieOptions
+{
+    Expires = DateTime.Now.AddDays(7),
+    HttpOnly = true
+});
 
     return RedirectToAction("Index", "Home");
 }
 
 public IActionResult Logout()
 {
-    // XÓA ĐÚNG COOKIE
     Response.Cookies.Delete("UserEmail");
+    Response.Cookies.Delete("FullName");
+    HttpContext.Session.Clear();
+
     return RedirectToAction("Index", "Home");
 }
     }
